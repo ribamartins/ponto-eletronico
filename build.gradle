@@ -2,6 +2,14 @@ plugins {
 	id 'org.springframework.boot' version '2.3.4.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
+	id "org.flywaydb.flyway" version "7.0.2"
+}
+
+flyway {
+	url = 'jdbc:mysql://localhost:3306/ponto_eletronico?useTimezone=true&serverTimezone=UTC'
+	user = 'root'
+	password = 'krakatoa'
+	schemas = ['ponto_eletronico']
 }
 
 group = 'br.com.smart'
@@ -13,11 +21,15 @@ repositories {
 }
 
 dependencies {
+	compile "org.springframework.boot:spring-boot-starter-security"
+	compileOnly 'org.projectlombok:lombok'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.flywaydb:flyway-core'
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'mysql:mysql-connector-java'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
