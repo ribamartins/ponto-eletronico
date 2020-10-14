@@ -1,2 +1,10 @@
-package br.com.smart.eletronicpoint.enums;public class TypeEnum {
+package br.com.smart.eletronicpoint.enums;
+
+public enum TypeEnum {
+    START_WORK,
+    END_WORK,
+    START_LUNCH,
+    END_LUNCH,
+    START_BREAK,
+    END_BREAK;
 }
