@@ -2,7 +2,6 @@ package br.com.smart.eletronicpoint.entities;
 
 import br.com.smart.eletronicpoint.enums.TypeEnum;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.util.Date;

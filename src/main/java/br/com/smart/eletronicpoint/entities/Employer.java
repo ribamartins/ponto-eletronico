@@ -1,10 +1,7 @@
 package br.com.smart.eletronicpoint.entities;
 
-
 import br.com.smart.eletronicpoint.enums.ProfileEnum;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;

@@ -3,7 +3,6 @@ package br.com.smart.eletronicpoint.entities;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Entity
 @NoArgsConstructor
 @Table(name = "company")
 public class Company implements Serializable {

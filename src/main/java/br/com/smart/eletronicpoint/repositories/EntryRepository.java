@@ -15,7 +15,7 @@ import java.util.List;
 @NamedQueries({
         @NamedQuery(
                 name = "EntryRepository.findByEmployerId",
-                query = "SELECT entry FROM Entry e WHERE e.employer.id = :employerId"
+                query = "SELECT entry FROM Entry e WHERE e.Employer.id = :employerId"
         )
 })
 
